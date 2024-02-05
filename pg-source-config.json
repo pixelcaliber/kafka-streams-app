@@ -1,0 +1,15 @@
+{
+    "name": "pg-gsheets-source-2",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "database.hostname": "host.docker.internal",
+        "database.port": "5433",
+        "database.user": "postgres",
+        "database.password": "12345",
+        "database.dbname": "postgres",
+        "database.server.name": "test-server",
+        "plugin.name": "wal2json",
+        "table.include.list": "public.answers",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter"
+    }
+}
